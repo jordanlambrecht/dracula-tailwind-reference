@@ -30,4 +30,56 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+
+  .fade-in {
+    animation: fadeIn 0.5s ease-in-out forwards;
+  }
+
+  .fade-out {
+    animation: fadeOut 0.5s ease-in-out forwards;
+  }
+}
+
+.circular-chart {
+  max-width: 80px;
+  max-height: 80px;
+  display: block;
+  margin: 10px auto;
+}
+
+.circle-bg {
+  fill: none;
+  stroke: #eee;
+  stroke-width: 3.8;
+}
+
+.circle {
+  fill: none;
+  stroke-width: 2.8;
+  stroke: #ff6347;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 1s linear; /* Transition for smooth movement */
+}
+
+.percentage {
+  font-family: sans-serif;
+  font-size: 0.5em;
+  text-anchor: middle;
 }

@@ -1,4 +1,4 @@
-import type { Config } from "tailwindcss";
+import type { Config } from "tailwindcss"
 
 const config: Config = {
   content: [
@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      maxWidth: {
+        "8xl": "96rem",
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
@@ -15,6 +18,10 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
-};
-export default config;
+  plugins: [
+    // https://draculatheme.com/tailwind
+    require("tailwind-dracula")("dracula"),
+    require("tailwind-scrollbar"),
+  ],
+}
+export default config
