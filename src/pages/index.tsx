@@ -2,20 +2,21 @@ import DraculaCard from "@/components/DraculaCard"
 import { H1, H2, H3, Subheader } from "@/components/typography/typography"
 import draculaColors from "@/data/draculaColors"
 import Link from "next/link"
-import CircularCountdownTimer from "@/components/Countdown"
+
 const Dracula: React.FC = () => {
   // Sort entries to move "DEFAULT" to the front
 
   return (
     <main className='min-h-screen px-12 py-64 bg-dracula-darker-900'>
-      <CircularCountdownTimer interval={30} />
       <div className='mx-auto max-w-8xl'>
         <div className='mb-16'>
           <H1 className='mb-2 italic text-dracula'>Dracula for Tailwind</H1>
-          <Subheader>Quick Reference Guide</Subheader>
+          <Subheader className='text-yellow'>
+            A Quick-Reference Color Chart Guide
+          </Subheader>
           <Link
             href='https://draculatheme.com/tailwind'
-            className='text-lg duration-75 text-yellow hover:text-yellow-100'
+            className='text-lg duration-75 text-green hover:text-green-100 underline'
             target='_blank'
           >
             View the official documentation here →
