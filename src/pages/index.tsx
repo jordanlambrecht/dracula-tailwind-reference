@@ -7,19 +7,19 @@ const Dracula: React.FC = () => {
   // Sort entries to move "DEFAULT" to the front
 
   return (
-    <main className='min-h-screen px-12 py-64 bg-dracula-darker-900'>
+    <main className='min-h-screen px-12 py-32 bg-dracula-darker-900'>
       <div className='mx-auto max-w-8xl'>
         <div className='mb-16'>
-          <H1 className='mb-2 italic text-dracula'>Dracula for Tailwind</H1>
-          <Subheader className='text-yellow'>
+          <H1 className='mb-2 text-dracula'>Dracula for Tailwind</H1>
+          <Subheader className='text-yellow italic mb-12'>
             A Quick-Reference Color Chart Guide
           </Subheader>
           <Link
             href='https://draculatheme.com/tailwind'
-            className='text-lg duration-75 text-green hover:text-green-100 underline'
+            className='text-lg duration-75 text-dracula-green hover:text-dracula-green-100 underline'
             target='_blank'
           >
-            View the official documentation here →
+            <p> View the official documentation→</p>
           </Link>
         </div>
         <div className='flex flex-col items-center justify-center py-2 space-y-12 overflow-x-hidden '>
