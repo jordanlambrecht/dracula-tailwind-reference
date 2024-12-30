@@ -2,8 +2,7 @@
 import { withPlausibleProxy } from "next-plausible"
 
 const nextConfig = {
-  // Example: Add your Next.js configurations here
-  // output: 'standalone',
+  swcMinify: true,
 }
 
 export default withPlausibleProxy()(nextConfig)

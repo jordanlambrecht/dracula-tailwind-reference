@@ -1,6 +1,7 @@
-import type { Config } from "tailwindcss"
+import tailwindDracula from "tailwind-dracula"
+import tailwindScrollbar from "tailwind-scrollbar"
 
-const config: Config = {
+const config = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -22,7 +23,6 @@ const config: Config = {
         fadeIn: "fadeIn 0.5s ease-in-out forwards",
         fadeOut: "fadeOut 0.5s ease-in-out forwards",
       },
-
       maxWidth: {
         "8xl": "96rem",
       },
@@ -33,10 +33,7 @@ const config: Config = {
       },
     },
   },
-  plugins: [
-    // https://draculatheme.com/tailwind
-    require("tailwind-dracula")("dracula"),
-    require("tailwind-scrollbar"),
-  ],
+  plugins: [tailwindDracula("dracula"), tailwindScrollbar],
 }
+
 export default config
