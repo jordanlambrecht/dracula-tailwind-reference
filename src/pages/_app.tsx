@@ -8,6 +8,7 @@ export default function App({ Component, pageProps }: AppProps) {
       domain='dracula-tailwind.com'
       trackOutboundLinks
       trackLocalhost
+      customDomain={"https://analytics.jordy.world"}
       selfHosted
       enabled
     >
