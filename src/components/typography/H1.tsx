@@ -1,4 +1,3 @@
-import React from "react"
 import classNames from "classnames"
 
 interface H1Props {
@@ -6,8 +5,8 @@ interface H1Props {
   className?: string
 }
 
-const H1: React.FC<H1Props> = ({ children, className }) => {
-  const baseClasses = "text-8xl font-extrabold "
+const H1 = ({ children, className }: H1Props) => {
+  const baseClasses = "text-6xl lg:text-8xl font-extrabold ml-0 pl-0"
   const combinedClasses = classNames(baseClasses, className)
 
   return <h1 className={combinedClasses}>{children}</h1>
