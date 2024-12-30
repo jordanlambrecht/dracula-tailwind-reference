@@ -1,13 +1,11 @@
 import DraculaCard from "@/components/DraculaCard"
-import { H1, H2, H3, Subheader } from "@/components/typography/typography"
+import { H1, H2, Subheader } from "@/components/typography/typography"
 import draculaColors from "@/data/draculaColors"
 import Link from "next/link"
 
-const Dracula: React.FC = () => {
-  // Sort entries to move "DEFAULT" to the front
-
+const Dracula = () => {
   return (
-    <main className='min-h-screen px-12 py-32 bg-dracula-darker-900'>
+    <main className='min-h-screen px-6 lg:px-12 py-16 lg:py-32 bg-dracula-darker-900'>
       <div className='mx-auto max-w-8xl'>
         <div className='mb-16'>
           <H1 className='mb-2 text-dracula'>Dracula for Tailwind</H1>
@@ -28,7 +26,7 @@ const Dracula: React.FC = () => {
               <div className='w-full overflow-hidden' key={i}>
                 <H2 className={`mb-3 text-pink-50`}>{colorCategory}</H2>
                 <div
-                  className={`relative flex flex-row w-full h-72 p-4 border-aro outline-r-8 border-r-8 space-x-4 overflow-x-scroll overflow-y-hidden rounded-lg shadow-sm bg-aro scrollbar-thin scrollbar-thumb-dracula scrollbar-track-aro scrollbar-thumb-rounded-full scrollbar-track-rounded-full `}
+                  className={`overflow-y-hidden relative flex flex-row w-full h-auto p-4 border-aro outline-r-8 border-r-8 gap-x-4 overflow-x-scroll  rounded-lg shadow-sm bg-aro scrollbar lg:scrollbar-thin scrollbar-thumb-dracula scrollbar-track-aro scrollbar-thumb-rounded-full scrollbar-track-rounded-full scrollbar-w-12`}
                 >
                   {Object.entries(draculaColors[colorCategory])
                     .sort(([keyA], [keyB]) =>
@@ -38,16 +36,15 @@ const Dracula: React.FC = () => {
                       <div
                         key={shade}
                         className={`${
-                          index === 0 ? "lg:sticky left-0 z-20 " : "snap-start"
+                          index === 0 ? " md:sticky left-0 z-20 " : "snap-start"
                         }`}
                       >
                         {index === 0 ? (
-                          <div className='absolute w-64 -mb-4 -ml-6 h-72 -top-4 -z-10 bg-aro'></div>
+                          <div className='hidden md:block md:absolute w-72 -left-4 bottom-0 -top-4 -z-10 bg-aro bg-clip-content'></div>
                         ) : (
                           ""
                         )}
                         <DraculaCard
-                          // className={`bg-${colorCategory}-${shade}`}
                           color={colorCategory}
                           shade={shade}
                           hex={hex}
