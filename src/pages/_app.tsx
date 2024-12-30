@@ -13,12 +13,12 @@ export default function App({ Component, pageProps }: AppProps) {
 
   return (
     <PlausibleProvider
-      domain={"dracula-tailwind.com"}
-      trackOutboundLinks={true}
-      trackLocalhost={true}
-      // customDomain={"analytics.jordy.world"}
-      selfHosted={true}
-      enabled={true}
+      domain='dracula-tailwind.com'
+      trackOutboundLinks
+      trackLocalhost={process.env.NODE_ENV !== "production"}
+      selfHosted
+      customDomain='https://analytics.jordy.world'
+      enabled={process.env.NODE_ENV === "production"}
     >
       <NextSeo
         title={title}

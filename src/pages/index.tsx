@@ -65,6 +65,7 @@ const Dracula = () => {
           <Link
             href={"https://jordanlambrecht.com"}
             className='underline text-green'
+            target='_blank'
           >
             Jordan Lambrecht
           </Link>
