@@ -5,6 +5,4 @@ const nextConfig = {
   reactStrictMode: true,
 }
 
-export default withPlausibleProxy({
-  customDomain: "https://analytics.jordy.world", // Point to your self-hosted Plausible instance
-})(nextConfig)
+export default withPlausibleProxy()(nextConfig)
