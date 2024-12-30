@@ -1,20 +1,22 @@
 import DraculaCard from "@/components/DraculaCard"
 import { H1, H2, Subheader } from "@/components/typography/typography"
 import draculaColors from "@/data/draculaColors"
+import { usePlausible } from "next-plausible"
 import Link from "next/link"
 
 const Dracula = () => {
+  const plausible = usePlausible()
   return (
-    <main className='min-h-screen px-6 lg:px-12 py-16 lg:py-32 bg-dracula-darker-900'>
+    <main className='min-h-screen px-6 py-16 lg:px-12 lg:py-32 bg-dracula-darker-900'>
       <div className='mx-auto max-w-8xl'>
         <div className='mb-16'>
           <H1 className='mb-2 text-dracula'>Dracula for Tailwind</H1>
-          <Subheader className='text-yellow italic mb-12'>
+          <Subheader className='mb-12 italic text-yellow'>
             A Quick-Reference Color Chart Guide
           </Subheader>
           <Link
             href='https://draculatheme.com/tailwind'
-            className='text-lg duration-75 text-dracula-green hover:text-dracula-green-100 underline'
+            className='text-lg underline duration-75 text-dracula-green hover:text-dracula-green-100'
             target='_blank'
           >
             <p> View the official documentation→</p>
@@ -40,7 +42,7 @@ const Dracula = () => {
                         }`}
                       >
                         {index === 0 ? (
-                          <div className='hidden md:block md:absolute w-72 -left-4 bottom-0 -top-4 -z-10 bg-aro bg-clip-content'></div>
+                          <div className='bottom-0 hidden md:block md:absolute w-72 -left-4 -top-4 -z-10 bg-aro bg-clip-content'></div>
                         ) : (
                           ""
                         )}
