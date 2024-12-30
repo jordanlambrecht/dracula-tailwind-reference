@@ -2,7 +2,7 @@
 import { withPlausibleProxy } from "next-plausible"
 
 const nextConfig = {
-  swcMinify: true,
+  reactStrictMode: true,
 }
 
 export default withPlausibleProxy()(nextConfig)
