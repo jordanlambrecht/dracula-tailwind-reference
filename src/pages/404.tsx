@@ -1,7 +1,15 @@
 import { H1, Subheader } from "@/components/typography/typography"
 import Link from "next/link"
+import { useEffect } from "react"
+import PlausibleProvider, { usePlausible } from "next-plausible"
 
 const NotFound = () => {
+  const plausible = usePlausible()
+  useEffect(() => {
+    plausible("Page Not Found", {
+      props: { page: document.location.pathname },
+    })
+  }, [plausible])
   return (
     <main className='min-h-screen px-6 lg:px-12 py-16 lg:py-32 bg-dracula-darker-900 text-center'>
       <div className='mx-auto max-w-8xl'>

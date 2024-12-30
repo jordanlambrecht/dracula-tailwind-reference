@@ -4,7 +4,13 @@ import PlausibleProvider from "next-plausible"
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <PlausibleProvider domain='dracula-tailwind.com'>
+    <PlausibleProvider
+      domain='dracula-tailwind.com'
+      trackOutboundLinks
+      trackLocalhost
+      selfHosted
+      enabled
+    >
       <Component {...pageProps} />
     </PlausibleProvider>
   )
