@@ -19,6 +19,7 @@ export default function App({ Component, pageProps }: AppProps) {
       selfHosted
       customDomain='https://analytics.jordy.world'
       // enabled={process.env.NODE_ENV === "production"}
+      enabled
     >
       <NextSeo
         title={title}
